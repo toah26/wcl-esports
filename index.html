@@ -244,6 +244,13 @@
   .avatar-slot svg{width:34%;opacity:0.5;}
   .player-card .role{font-family:var(--font-mono);font-size:10.5px;color:var(--ice);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;}
   .player-card .name{font-family:var(--font-display);font-weight:700;font-size:16.5px;color:var(--frost-white);}
+  .player-card .handle{font-family:var(--font-mono);font-size:12px;color:var(--ice-pale);opacity:0.75;margin-top:3px;}
+  .roster-group-label{
+    font-family:var(--font-mono);font-size:12px;color:var(--ice);letter-spacing:0.1em;
+    text-transform:uppercase;margin:36px 0 16px;display:flex;align-items:center;gap:10px;
+  }
+  .roster-group-label:first-of-type{margin-top:0;}
+  .roster-group-label::before{content:'';width:20px;height:1px;background:var(--ice-deep);}
   .roster-note{margin-top:32px;font-family:var(--font-mono);font-size:11.5px;color:var(--ice-pale);opacity:0.7;}
   @media (max-width:900px){.roster-grid{grid-template-columns:repeat(2,1fr);}}
   @media (max-width:540px){.roster-grid{grid-template-columns:1fr 1fr;gap:14px;}}
@@ -393,7 +400,7 @@
     <div class="about-text">
       <div class="section-eyebrow">Who We Are</div>
       <h2>Built for the long season.</h2>
-      <p><strong>Placeholder paragraph.</strong> This is where the organization's founding story, philosophy, or approach to competition would go — written specifically for Winter once real content is confirmed.</p>
+      <p><strong>Placeholder paragraph.</strong> This is where the organization's founding story, philosophy, or approach to competition would go — written specifically for World Class once real content is confirmed.</p>
       <p>A second placeholder paragraph for supporting detail: what the org values, how it operates, or what makes it distinct from other esports organizations.</p>
     </div>
     <div class="frost-panel">
@@ -413,26 +420,26 @@
     <div class="section-head">
       <div class="section-eyebrow">Where We Compete</div>
       <h2>Divisions</h2>
-      <p class="section-desc">Placeholder structure for the games or titles Winter fields teams in. Swap in the actual division names and status once confirmed.</p>
+      <p class="section-desc">World Class fields teams across three titles. Roster reveals are ongoing as we lock in players and confirm competitive schedules.</p>
     </div>
     <div class="div-grid">
       <div class="div-card">
         <div class="div-shard"></div>
-        <h3>Division One</h3>
+        <h3>Rocket League</h3>
         <p>Placeholder description of this division's focus and format.</p>
-        <span class="div-status">STATUS: TBA</span>
+        <span class="div-status">STATUS: ACTIVE</span>
       </div>
       <div class="div-card">
         <div class="div-shard"></div>
-        <h3>Division Two</h3>
+        <h3>Fortnite</h3>
         <p>Placeholder description of this division's focus and format.</p>
-        <span class="div-status">STATUS: TBA</span>
+        <span class="div-status">STATUS: ACTIVE</span>
       </div>
       <div class="div-card">
         <div class="div-shard"></div>
-        <h3>Division Three</h3>
+        <h3>Valorant</h3>
         <p>Placeholder description of this division's focus and format.</p>
-        <span class="div-status">STATUS: TBA</span>
+        <span class="div-status">STATUS: RECRUITING</span>
       </div>
     </div>
   </div>
@@ -448,39 +455,66 @@
     <div class="section-head">
       <div class="section-eyebrow">The Team</div>
       <h2>Player Profiles</h2>
-      <p class="section-desc">No player data has been added yet. These are empty slots showing how the roster grid will look once real names, roles, and photos are provided.</p>
+      <p class="section-desc">Meet the players competing under the World Class banner. Photos and full bios to come as we build out each roster.</p>
     </div>
+
+    <div class="roster-group-label">Rocket League</div>
     <div class="roster-grid">
       <div class="player-card">
         <div class="avatar-slot">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6"></path></svg>
         </div>
-        <div class="role">Role — TBA</div>
-        <div class="name">Player Slot 1</div>
+        <div class="role">Rocket League</div>
+        <div class="name">Astro</div>
+        <div class="handle">@mightbeastro</div>
       </div>
       <div class="player-card">
         <div class="avatar-slot">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6"></path></svg>
         </div>
-        <div class="role">Role — TBA</div>
-        <div class="name">Player Slot 2</div>
+        <div class="role">Rocket League</div>
+        <div class="name">mzgf</div>
+        <div class="handle">@mzgf</div>
       </div>
       <div class="player-card">
         <div class="avatar-slot">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6"></path></svg>
         </div>
-        <div class="role">Role — TBA</div>
-        <div class="name">Player Slot 3</div>
+        <div class="role">Rocket League</div>
+        <div class="name">Ryised | RL Pro</div>
+        <div class="handle">@ryised</div>
       </div>
       <div class="player-card">
         <div class="avatar-slot">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6"></path></svg>
         </div>
-        <div class="role">Role — TBA</div>
-        <div class="name">Player Slot 4</div>
+        <div class="role">Rocket League</div>
+        <div class="name">yunjin.</div>
+        <div class="handle">@ryouhh</div>
       </div>
     </div>
-    <p class="roster-note">// roster data not yet provided — grid shown with empty slots only</p>
+
+    <div class="roster-group-label">Fortnite</div>
+    <div class="roster-grid">
+      <div class="player-card">
+        <div class="avatar-slot">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6"></path></svg>
+        </div>
+        <div class="role">Fortnite</div>
+        <div class="name">maestrofnbr91</div>
+        <div class="handle">@maestrofnbr91</div>
+      </div>
+      <div class="player-card">
+        <div class="avatar-slot">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6"></path></svg>
+        </div>
+        <div class="role">Fortnite</div>
+        <div class="name">Xyrafn</div>
+        <div class="handle">@xyrafn_39907</div>
+      </div>
+    </div>
+
+    <p class="roster-note">// Valorant roster — recruiting, no players confirmed yet</p>
   </div>
 </section>
 
