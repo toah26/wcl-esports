@@ -275,6 +275,28 @@
   .merch-note{margin-top:32px;font-family:var(--font-mono);font-size:11.5px;color:var(--ice-pale);opacity:0.7;}
   @media (max-width:900px){.merch-grid{grid-template-columns:repeat(2,1fr);}}
 
+  /* ---------- JERSEY CUSTOMIZER ---------- */
+  .customizer{
+    display:grid;grid-template-columns:0.85fr 1.15fr;gap:48px;align-items:center;
+    margin-top:56px;padding-top:56px;border-top:1px solid var(--line);
+  }
+  .customizer-head{margin-bottom:24px;}
+  .customizer-form .field{margin-bottom:18px;}
+  .customizer-form .field label{
+    font-family:var(--font-mono);font-size:11px;letter-spacing:0.06em;
+    color:var(--ice-pale);text-transform:uppercase;display:block;margin-bottom:8px;
+  }
+  .customizer-form input{
+    width:100%;background:var(--ink-soft);border:1px solid var(--line);color:var(--frost-white);
+    padding:13px 14px;font-family:var(--font-body);font-size:14px;border-radius:2px;
+    transition:border-color 0.2s ease;
+  }
+  .customizer-form input:focus{border-color:var(--ice);outline:none;}
+  .customizer-note{margin-top:20px;font-family:var(--font-mono);font-size:11.5px;color:var(--ice-pale);opacity:0.7;}
+  .customizer-preview{display:flex;justify-content:center;}
+  .customizer-preview svg{width:100%;max-width:320px;}
+  @media (max-width:860px){.customizer{grid-template-columns:1fr;}}
+
   /* ---------- SPONSORS ---------- */
   .sponsor-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
   .sponsor-slot{
@@ -549,6 +571,44 @@
       </div>
     </div>
     <p class="merch-note">// no products listed yet — grid shown with empty slots only</p>
+
+    <div class="customizer">
+      <div class="customizer-form">
+        <div class="customizer-head">
+          <div class="section-eyebrow">Personalize</div>
+          <h2>Build your jersey</h2>
+          <p class="section-desc">Add your name and number to see how it looks on the back. This is a design preview — checkout isn't live yet.</p>
+        </div>
+        <div class="field">
+          <label for="jerseyName">Name</label>
+          <input id="jerseyName" type="text" maxlength="10" value="PLAYER" placeholder="Your name">
+        </div>
+        <div class="field">
+          <label for="jerseyNumber">Number</label>
+          <input id="jerseyNumber" type="text" maxlength="2" inputmode="numeric" value="00" placeholder="00">
+        </div>
+        <p class="customizer-note">// preview only — jersey ordering isn't available yet</p>
+      </div>
+      <div class="customizer-preview">
+        <svg viewBox="0 0 300 380" aria-hidden="true">
+          <defs>
+            <clipPath id="jerseyClip">
+              <path d="M50,26 Q76,0 112,0 Q150,20 188,0 Q224,0 250,26 L300,74 L264,110 L238,90 L238,340 L62,340 L62,90 L36,110 L0,74 Z"/>
+            </clipPath>
+          </defs>
+          <path d="M50,26 Q76,0 112,0 Q150,20 188,0 Q224,0 250,26 L300,74 L264,110 L238,90 L238,340 L62,340 L62,90 L36,110 L0,74 Z" fill="#0A0D12" stroke="#1C5A78" stroke-width="1"></path>
+          <g clip-path="url(#jerseyClip)">
+            <polygon points="0,60 300,10 300,55 0,105" fill="#7FD1EC" opacity="0.9"></polygon>
+            <text id="jerseyNameText" x="150" y="150" text-anchor="middle" font-size="22" font-weight="700" fill="#F4FAFD" font-family="Georgia, serif" letter-spacing="2">PLAYER</text>
+            <g transform="translate(150,175)">
+              <path d="M-14,7 L-10,-7 L-4,1 L0,-10 L4,1 L10,-7 L14,7 L10,3 L7,7 L-7,7 L-10,3 Z" fill="#7FD1EC"></path>
+            </g>
+            <text id="jerseyNumberText" x="150" y="280" text-anchor="middle" font-size="70" font-weight="700" fill="#F4FAFD" font-family="Georgia, serif">00</text>
+            <rect x="90" y="308" width="120" height="16" rx="2" fill="none" stroke="#F4FAFD" stroke-width="1" stroke-dasharray="2 2" opacity="0.55"></rect>
+          </g>
+        </svg>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -689,6 +749,23 @@
       const x = (e.clientX / window.innerWidth - 0.5) * 10;
       const y = (e.clientY / window.innerHeight - 0.5) * 10;
       crackLayer.style.transform = `translate(${3 + x}px, ${-2 + y}px)`;
+    });
+  }
+
+  // Jersey customizer live preview
+  const jerseyNameInput = document.querySelector('#jerseyName');
+  const jerseyNumberInput = document.querySelector('#jerseyNumber');
+  const jerseyNameText = document.querySelector('#jerseyNameText');
+  const jerseyNumberText = document.querySelector('#jerseyNumberText');
+  if (jerseyNameInput && jerseyNumberInput) {
+    jerseyNameInput.addEventListener('input', () => {
+      const val = jerseyNameInput.value.trim().toUpperCase() || 'PLAYER';
+      jerseyNameText.textContent = val;
+    });
+    jerseyNumberInput.addEventListener('input', () => {
+      const digits = jerseyNumberInput.value.replace(/[^0-9]/g, '').slice(0, 2);
+      jerseyNumberInput.value = digits;
+      jerseyNumberText.textContent = digits || '00';
     });
   }
 </script>
