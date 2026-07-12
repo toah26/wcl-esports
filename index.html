@@ -77,6 +77,25 @@
   .nav-links a.active{color:var(--frost-white);}
   .nav-links a.active::after{width:100%;}
 
+  .nav-discord-btn{
+    font-family:var(--font-body);font-weight:600;font-size:13px;
+    background:var(--ice);color:var(--ink);padding:9px 18px;border-radius:2px;
+    margin-left:24px;flex-shrink:0;transition:box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .nav-discord-btn:hover{
+    box-shadow:0 0 0 1px var(--ice), 0 0 18px rgba(127,209,236,0.5);
+    transform:translateY(-1px);
+  }
+  @media (max-width:700px){
+    .nav-discord-btn{display:none;}
+  }
+
+  .mobile-discord-btn{
+    font-family:var(--font-body) !important;font-size:16px !important;font-weight:600;
+    background:var(--ice);color:var(--ink) !important;padding:12px 28px;border-radius:2px;
+    margin-top:8px;
+  }
+
   .nav-toggle{
     display:none;background:none;border:none;cursor:pointer;
     width:32px;height:32px;flex-shrink:0;position:relative;
@@ -358,6 +377,7 @@
       <a href="#membership">Membership</a>
       <a href="#sponsors">Sponsors</a>
     </div>
+    <a href="https://discord.gg/n8nvfuxJhF" target="_blank" rel="noopener" class="nav-discord-btn">Discord</a>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -371,6 +391,7 @@
   <a href="#roster">Roster</a>
   <a href="#membership">Membership</a>
   <a href="#sponsors">Sponsors</a>
+  <a href="https://discord.gg/n8nvfuxJhF" target="_blank" rel="noopener" class="mobile-discord-btn">Join Discord</a>
 </div>
 
 <section class="hero">
@@ -547,8 +568,6 @@
         <div class="handle">@xyrafn_39907</div>
       </div>
     </div>
-
-    <p class="roster-note">// Valorant roster — recruiting, no players confirmed yet</p>
   </div>
 </section>
 
@@ -584,7 +603,6 @@
         <span class="tier-soon">COMING SOON</span>
       </div>
     </div>
-    <p class="tier-note">// membership isn't live yet — pricing and perks will be announced at launch</p>
     <form class="notify-row" onsubmit="return false;">
       <input type="email" placeholder="Your email — get notified at launch" aria-label="Email for updates">
       <button type="submit" class="btn btn-primary">Notify Me</button>
@@ -602,7 +620,7 @@
     <div class="section-head">
       <div class="section-eyebrow">Backed By</div>
       <h2>Sponsors &amp; Partnerships</h2>
-      <p class="section-desc">No sponsors confirmed yet. Slots below reserve space for partner logos once agreements are in place.</p>
+      <p class="section-desc">Reserved space for our partner and sponsor logos as those relationships are confirmed.</p>
     </div>
     <div class="sponsor-grid">
       <div class="sponsor-slot">SPONSOR SLOT</div>
@@ -611,8 +629,6 @@
       <div class="sponsor-slot">SPONSOR SLOT</div>
       <div class="sponsor-slot">SPONSOR SLOT</div>
     </div>
-    <p class="sponsor-note">// no sponsors confirmed yet — slots shown empty as a template</p>
-    <p class="sponsor-note">Interested in partnering with World Class? Reach out at <a href="mailto:partnerships@worldclass-example.gg" style="color:var(--ice);border-bottom:1px solid var(--ice-deep);">partnerships@worldclass-example.gg</a></p>
   </div>
 </section>
 
@@ -623,12 +639,12 @@
       <p>WORLD CLASS — PREVIEW BUILD</p>
     </div>
     <div class="footer-socials">
-      <a href="#" aria-label="Twitter/X"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"></circle></svg></a>
+      <a href="https://x.com/WorldClassHQ" target="_blank" rel="noopener" aria-label="Twitter/X"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"></circle></svg></a>
       <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="4"></rect></svg></a>
-      <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l10 6v8l-10 6-10-6V8z"></path></svg></a>
-      <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"></polygon></svg></a>
+      <a href="https://www.tiktok.com/@worldclasshq" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l10 6v8l-10 6-10-6V8z"></path></svg></a>
+      <a href="https://www.youtube.com/@WorldClassHQ" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"></polygon></svg></a>
       <a href="#" aria-label="Twitch"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 3h16v11l-5 5h-4l-3 3H6v-3H4z"></path></svg></a>
-      <a href="#" aria-label="Discord"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="4" y="4" width="16" height="16" rx="3"></rect></svg></a>
+      <a href="https://discord.gg/n8nvfuxJhF" target="_blank" rel="noopener" aria-label="Discord"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="4" y="4" width="16" height="16" rx="3"></rect></svg></a>
     </div>
   </div>
 </footer>
